@@ -6,8 +6,6 @@ export default function handleResponseFromAPI(promise) {
       body: 'Success',
     };
   }).then((response) => {
-    console.log(response);
-    return response;
   }).catch(() => {
     const ob = {};
     return new Error(ob);
