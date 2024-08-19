@@ -46,4 +46,5 @@ const countStudents = (pat) => {
         console.log(`Number of students in ${field}: ${students.length}. List: ${students.join(", ")}`)
     }
 }
-module.exports = countStudents
+module.exports = countStudents;
+
