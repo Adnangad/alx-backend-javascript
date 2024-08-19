@@ -36,8 +36,8 @@ const countStudents = (pat) => {
         }
     })
     const stdObj = {};
-    stdObj.SWE = sw;
     stdObj.CS = cs;
+    stdObj.SWE = sw;
     console.log(`Number of students: ${finalList.length}`);
     for (const [
         field,
