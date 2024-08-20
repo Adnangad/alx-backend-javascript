@@ -10,7 +10,6 @@ const http = require("http"),
 app.listen(
     PORT,
     () => {
-        console.log("...");
     }
 );
 module.exports = app;
