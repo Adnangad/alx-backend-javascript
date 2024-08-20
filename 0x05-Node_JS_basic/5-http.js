@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const PORT = 1245;
+const pat = process.argv[2]
 
 const app = http.createServer((req, resp) => {
   const { method, url } = req;
@@ -10,7 +11,7 @@ const app = http.createServer((req, resp) => {
   } else if (url === '/students' && method === 'GET') {
     resp.writeHead(200, { 'Content-Type': 'text/plain' });
     resp.write('This is the list of our students\n');
-    const readStream = fs.createReadStream('database.csv', 'utf-8');
+    const readStream = fs.createReadStream(pat, 'utf-8');
 
     let data = '';
     readStream.on('data', chunk => {
