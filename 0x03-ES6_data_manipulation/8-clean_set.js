@@ -5,7 +5,7 @@ export default function hasValuesFromArray(set, str) {
   let finalString = [];
   set.forEach((value) => {
     if (value.startsWith(str) === true) {
-      finalString.push(value.slice(str.length);
+      finalString.push(value.slice(str.length))
     }
   });
   return finalString.join('-');
