@@ -33,4 +33,7 @@ describe('calculateNumber', () => {
   it('rounding down a and b', () => {
     assert.strictEqual(calculateNumber(2.49, 3.499), 6);
   });
+  it('rounds up a and b', () => {
+    assert.equal(calculateNumber(2.4999, 1.49999), 3);
+  })
 });
