@@ -10,7 +10,7 @@ describe('Tests sendPaymentRequestApi module', function () {
     logspy = sinon.spy(console, 'log');
   });
   afterEach(function () {
-    sinon.reset();
+    logspy.resetHistory();
   });
   it('checks if results 1 were logged as expected', function () {
     sendPaymentRequestToApi(100, 20);

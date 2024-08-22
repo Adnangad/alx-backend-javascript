@@ -1,15 +1,15 @@
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
-const request = require('supertest');
-const app = require('./api');
+const request = require("request");
+const app = require("./api");
 
-describe('It tests the app', function() {
-    it('tests the response status', async () => {
-        const response = await request(app).get('/');
-        expect(response.status).to.equal(200);
-    })
-    it('tests the response value', async () => {
-        const response = await request(app).get('/');
-        expect(response.text).to.equal('Welcome to the payment system');
-    })
-})
+describe("It tests the app", function () {
+    const url = 'http://localhost:7865';
+  it("tests the response status", function (done) {
+    request.get(`${url}/`, (_err, res, body) => {
+      expect(res.statusCode).to.be.equal(200);
+      expect(body).to.be.equal("Welcome to the payment system");
+      done();
+    });
+  });
+});
