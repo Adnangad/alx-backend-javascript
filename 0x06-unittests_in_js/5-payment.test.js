@@ -3,7 +3,7 @@ const expect = chai.expect;
 const sendPaymentRequestToApi = require('./5-payment');
 const sinon = require('sinon');
 
-describe('Tests sendPaymentRequestApi module', function () {
+describe('sendPaymentRequestApi module', function () {
   let logspy;
 
   before(function () {
@@ -12,12 +12,12 @@ describe('Tests sendPaymentRequestApi module', function () {
   afterEach(function () {
     logspy.resetHistory();
   });
-  it('checks if results 1 were logged as expected', function () {
+  it('sendPaymentRequestToAPI', function () {
     sendPaymentRequestToApi(100, 20);
     expect(logspy.calledOnce).to.be.true;
     expect(logspy.calledWith('The total is: 120')).to.be.true;
   });
-  it('checks if the results were logged as expected', function () {
+  it('sendPaymentRequestToAPI', function () {
     sendPaymentRequestToApi(10, 10);
     expect(logspy.calledOnce).to.be.true;
     expect(logspy.calledWith('The total is: 20')).to.be.true;

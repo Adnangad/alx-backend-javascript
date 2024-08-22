@@ -25,4 +25,17 @@ describe("It tests the app", function () {
       done();
     });
   });
+  it('tests if /id returns 404 response for negative number values', (done) => {
+    request.get(`${API_URL}/cart/-57`, (_err, res, _body) => {
+      expect(res.statusCode).to.be.equal(404);
+      done();
+    });
+  });
+
+  it('tests if/id returns 404 response for non-numeric values ', (done) => {
+    request.get(`${API_URL}/cart/ad124ee-3`, (_err, res, _body) => {
+      expect(res.statusCode).to.be.equal(404);
+      done();
+    });
+  });
 });
