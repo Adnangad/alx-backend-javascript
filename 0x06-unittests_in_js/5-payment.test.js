@@ -3,10 +3,10 @@ const expect = chai.expect;
 const sendPaymentRequestToApi = require('./5-payment');
 const sinon = require('sinon');
 
-describe('sendPaymentRequestApi module', function () {
+describe('sendPaymentRequestApi', function () {
   let logspy;
 
-  before(function () {
+  beforeEach(function () {
     logspy = sinon.spy(console, 'log');
   });
   afterEach(function () {
