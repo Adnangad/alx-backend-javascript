@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 app.get('/cart/:id(\\d+)', (req, res) => {
     const cart_id = req.params.id;
-    res.send(`Payment methods for cart :${cart_id}`);
+    res.send(`Payment methods for cart ${cart_id}`);
 })
 app.listen(PORT, () => {
     console.log(`API available on localhost port ${PORT}`);
