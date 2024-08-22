@@ -1,6 +1,6 @@
-import * as chai from 'chai';
-import calculateNumber from './2-calcul_chai.js';
-const { expect } = chai;
+const chai = require('chai');
+const expect  = chai.expect;
+const calculateNumber = require('./2-calcul_chai')
 
 describe('Tests the calculateNumber function', function () {
   it('tests the output of the function if the type is SUM', function () {
