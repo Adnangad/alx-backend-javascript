@@ -10,7 +10,7 @@ describe('sendPaymentRequestApi', function () {
     logspy = sinon.spy(console, 'log');
   });
   afterEach(function () {
-    logspy.resetHistory();
+    sinon.restore();
   });
   it('sendPaymentRequestToAPI', function () {
     sendPaymentRequestToApi(100, 20);
